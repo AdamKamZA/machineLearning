@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="./echarts.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <section class="Lcol">
+            <section class="tile">
+                <div id="dInput">
+                    <label>Enter Points:</label>
+                    <span id="dataIn" class="input" role="textbox" contenteditable></span>
+                </div>
+            </section>
+            <section class="tile">
+                <div id="dDisplay">
+                    <!-- Display all input data from the user when clicking an add button -->
+                    <label for="dataIn">Data Points:</label>
+                    <span role="textbox" id="dOut" class="output"></span>
+                </div>
+            </section>
+            <section class="tile">
+                <div id="cInput">
+                    <label>Enter Centroids:</label>
+                    <span id="centIn" class="input" role="textbox" contenteditable></span>
+                </div>
+            </section>
+            <section class="tile">
+                <div id="cDisplay">
+                    <label for="dataIn">Centroids:</label>
+                    <span role="textbox" id= "cOut" class= "output"></span>
+                </div>
+            </section>
+        </section>
+        
+        <section class="Rcol">
+            <section class="tile accent">
+                <div id="btnOption">
+                    <button onclick="addPoints()">Add Points</button>
+                    <button onclick="addCentroids()">Add Centroids</button>
+                    <button onclick="run(), display()">Run</button>
+                </div>
+            </section>
+            <section class="tile">
+                <div id="graph">
+                    Graph TBD
+                </div>
+            </section>
+        </section>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
