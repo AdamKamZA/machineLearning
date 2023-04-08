@@ -1,12 +1,11 @@
 
 class k_Means{
-    //0.5,1.1,1,1.2,2,1.2,3,1.6,0.5,1.4,3,1.7,3.5,1.8,4,1.3
     constructor(inputData){
-        this._input = inputData || [[1,5],[4,3],[7,1],[4,5],[3,1],[7,7],[5,5],[8,1],[3,1],[6,8],[8,9],[1,9]];
+        this._input = inputData || [[1,5],[4,3],[7,1],[4,5],[3,1],[7,7],[5,5],[8,1],[3,1],[6,8],[8,9],[1,9]]; //default data
         this._dataDisplay = document.getElementById("dataDisplay");
         this._distanceTable = [];
         this._groupTable = [];
-        this._centroids = []//default 2 starting centroids if not specified
+        this._centroids = []; //default 2 starting centroids if not specified
     }
 
     get input(){
@@ -26,20 +25,6 @@ class k_Means{
      */
     set centroids(centroidArr=[]){
         this._centroids = centroidArr;
-    }
-
-    /**
-     * Takes a 2D array of grouped distance matrices and finds the average of each one to set a new midpoint
-     * @param {Array} centroidArrs 
-     */
-    //ISSUE DOESNT DO ANYTHING
-    set NewCentroids(centroidArrs){
-
-        //Getting average of each centroid based on its array of closest points
-        for(let i=0;i<this._centroids.length;i++){
-            this._centroids[i] = this.getAverage(centroidArrs[i]);//each return is pair array [p1,p2]
-        }
-
     }
 
     setDistance(){
@@ -147,10 +132,8 @@ function setData(){
     //read input and add to the parargraph
     //once done, they select Run, then it sets them as centroids immediately
     let data = document.getElementById("inputData").innerText;
-    //console.log(data)
     let dataVal = data.split('\n');
-    //console.log(dataVal);
-    algo.Data = [1,1];
+    
 
     let centroidData = document.getElementById("centInput").innerText;
     let centers = centroidData.split('\n');
