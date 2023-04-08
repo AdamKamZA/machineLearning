@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>K-Means Visualiser</title>
     <script src="./echarts.min.js"></script>
 </head>
 <body>
@@ -14,6 +14,7 @@
             <section class="tile">
                 <div id="dInput">
                     <label>Enter Points:</label>
+                    <button onclick="addPoints()"></span>Add Points</button>
                     <span id="dataIn" class="input" role="textbox" contenteditable></span>
                 </div>
             </section>
@@ -27,6 +28,7 @@
             <section class="tile">
                 <div id="cInput">
                     <label>Enter Centroids:</label>
+                    <button onclick="addCentroids()"></span>Add Centroids</button>
                     <span id="centIn" class="input" role="textbox" contenteditable></span>
                 </div>
             </section>
@@ -39,10 +41,9 @@
         </section>
         
         <section class="Rcol">
-            <section class="tile accent">
+            <section class="tile accent menu">
+                <h1>A-Means!? K-Means!!</h1>
                 <div id="btnOption">
-                    <button onclick="addPoints()"><span id="bg"></span>Add Points</button>
-                    <button onclick="addCentroids()"><span id="bg"></span>Add Centroids</button>
                     <button onclick="run(), display()"><span id="bg"></span>Run</button>
                 </div>
             </section>
